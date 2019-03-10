@@ -1,0 +1,138 @@
+#registerPage {
+    background-color: #a4d4f6;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+  .create-account-box-wrapper {
+    height: 550px;
+    width: 538px;
+  }
+ 
+  .sign-in-box {
+    width: 100%;
+    height: 100%;
+  }
+ 
+  .el-card {
+    border: none;
+  }
+ 
+  .sign-in-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .col1{
+    float: left;
+  }
+ .col2{
+   float: right;
+ }
+  .el-input__inner {
+    height: 52px;
+    font-size: 18px;
+   
+  }
+ 
+  /* .el-form-item {
+    margin-bottom: 33px;
+  } */
+ 
+  .el-card__body {
+    height: 100%;
+    padding: 43px;
+  }
+ 
+  .form-header-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    padding-bottom: 35px;
+  }
+  .Create-your-account {
+    width: 221px;
+    height: 28px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    color: #000000;
+  }
+
+  .Use-8-or-more-charac {
+    width: 451px;
+    height: 42px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    color: #a2a2a2;
+  }
+ 
+  .form-title-text {
+    font-size: 24px;
+    font-weight: bold;
+  }
+ 
+  .form-footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .sign-in-instead-btn {
+    width: 123px;
+    height: 21px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    color: #1974e8;
+  }
+  .next-button-wrapper>button {
+    font-size: 18px;
+    width: 98px;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: #1974e8;
+    color: white;
+    border: none;
+  }
+ 
+  .text-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+ 
+  .text-button-wrapper>a {
+    font-family: Roboto;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1974e8;
+  }
+ 
+  button:disabled {
+    opacity: 0.5;
+  }
+ 
+  .instruction-text-wrapper {
+    font-size: 18px;
+    color: #a2a2a2;
+    margin-top: -13px;
+    margin-bottom: 57px;
+  }
