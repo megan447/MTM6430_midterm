@@ -23,7 +23,7 @@ const router = new VueRouter({
       component: dashboardPage
     },
     {
-      path: '/listpage',
+      path: '/list',
       component: listPage
     }
   ]

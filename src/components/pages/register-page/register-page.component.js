@@ -68,8 +68,7 @@ export default {
           'firstName': this.formData.firstName,
           'lastName': this.formData.lastName,
           'email': this.formData.email,
-          'password': this.formData.password,
-          'confirm': this.formData.passwordConfirm
+          'password': this.formData.password
         }
         this.$store.dispatch('REGISTER', credentials).then(
           (user) => this.onRegisterSuccessful(user),
@@ -82,7 +81,7 @@ export default {
         throw new Error('Something went wrong!')
       }
       this.isFormValidated = true
-      this.$router.push('dashboardPage')
+      this.$router.push('dashboard')
     },
 
     onRegisterFailed (error) {

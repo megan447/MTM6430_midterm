@@ -8,7 +8,7 @@
         </div>
         <div class="form-body-wrapper">
           <!-- TODO: add form and form items inside for all control -->
-          <el-form :model="formData" ref="formData" @focusout.native="updateIsFormValiddated">
+          <el-form :model="formData" ref="formData" @focusout.native="updateIsFormValidated">
             <el-form-item>
               <el-col :span="11.5" :rules="rules.firstName" prop="firstName" class="col1">
                 <el-input placeholder="First name" v-model="formData.firstName"></el-input>
@@ -47,7 +47,7 @@
           </div>
           <div class="next-button-wrapper">
             <button
-              v-bind="updateIsFormValidated"
+              v-bind:disabled="!updateIsFormValidated"
               @click="register"
               class="text-button-wrapper"
             >Next</button>

@@ -45,7 +45,7 @@ export default {
         throw new Error('Something went wrong!')
       }
 
-      this.$router.push('dashboardPage')
+      this.$router.push('dashboard')
     },
 
     onLoginFailed (error) {

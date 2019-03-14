@@ -1,3 +1,9 @@
 export default {
-  name: 'dashboardPage'
+  name: 'dashboardPage',
+  data () {
+    return {
+      firstName: this.$store.getters.USER
+    }
+  }
+
 }

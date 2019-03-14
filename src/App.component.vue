@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-   <el-container>
-     <el-aside width="200px" v-if="isLogIn">
-       <side-navigation/>
-     </el-aside>
-     <el-main>
-       <router-view></router-view>
-     </el-main>
-   </el-container>
+    <el-container>
+      <el-aside v-if="isLogIn">
+        <side-navigation/>
+      </el-aside>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
+    </el-container>
   </div>
 </template>
 
