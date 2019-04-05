@@ -5,10 +5,16 @@ import VueRouter from 'vue-router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import VueForm from 'vue-form'
-
-// internal libs
+import * as VueGoogleMaps from 'vue2-google-maps'
 import router from './router'
 import store from './store'
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: process.env.VUE_APP_GOOGLE_API_KEY,
+    libraries: 'places' // This is required if you use the Autocomplete plugin
+  }
+})
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
