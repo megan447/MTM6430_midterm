@@ -9,6 +9,21 @@
     line-height: normal;
     letter-spacing: 0.2px;
     color: #000000;
-    margin-top: 120px;
-    margin-left: 100px;
   }
+.list-wrapper{
+  padding: 50px 100px;
+}
+.map-view-card > .el-card__body{
+    padding: 0
+  }
+.list-header{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.list-title{
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+}
