@@ -2,21 +2,28 @@
     <div id="mapView">
         <div class="map-view-wrapper">
            <div class="address-list-wrapper" v-if="showList">
-                 Some List
+                <div
+                     v-for="address in addressList"
+                     :key="address.id"
+                     @click="setLocation(address)"
+                     class="address-item"
+                     v-bind:class="{'current-place': currentPlace && address.id === currentPlace.id}">
+                    {{address.street}}
+                </div>
            </div>
            <div class="map-wrapper">
-              <GmapMap
-                :center="{lat:10, lng:10}"
-                :zoom="7"
-                style="width: 100%; height: 300px"
-                >
-                <GmapMarker
+              <gmap-map
+                v-if="center"
+                :center="center"
+                :zoom="zoomValue"
+                style="width: 100%; height: 400px">
+                <gmap-marker
                     :key="index"
                     v-for="(m, index) in markers"
                     :position="m.position"
                     @click="center=m.position"
                 />
-               </GmapMap>
+               </gmap-map>
            </div>
         </div>
     </div>

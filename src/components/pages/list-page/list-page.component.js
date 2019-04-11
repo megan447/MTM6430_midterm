@@ -12,7 +12,6 @@ export default {
     }
   },
   mounted () {
-    console.log('mounted...')
     this.$store.dispatch('GET_ADDRESS_LIST').then(addressList => {
       this.addressList = addressList
     })
