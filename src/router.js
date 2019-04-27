@@ -20,12 +20,32 @@ const router = new VueRouter({
     },
     {
       path: '/dashboard',
-      component: dashboardPage
+      component: dashboardPage,
+      mata: {
+        requiresAuth: true
+      }
     },
     {
       path: '/list',
-      component: listPage
+      component: listPage,
+      mata: {
+        requiresAuth: true
+      }
     }
   ]
+})
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (localStorage.getItem('token') == null) {
+      next({
+        path: '/login',
+        params: to.fullPath
+      })
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
 })
 export default router
