@@ -9,6 +9,10 @@ import * as VueGoogleMaps from 'vue2-google-maps'
 import router from './router'
 import store from './store'
 
+Vue.config.productionTip = false
+Vue.use(VueRouter)
+Vue.use(ElementUI)
+Vue.use(VueForm)
 Vue.use(VueGoogleMaps, {
   load: {
     key: process.env.VUE_APP_GOOGLE_API_KEY,
@@ -16,10 +20,7 @@ Vue.use(VueGoogleMaps, {
   }
 })
 
-Vue.config.productionTip = false
-Vue.use(VueRouter)
-Vue.use(ElementUI)
-Vue.use(VueForm)
+Vue.router = router
 
 new Vue({
   router,
