@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .el-container {
@@ -13,4 +13,27 @@ body {
 
 .el-container > .el-main {
   padding: 0;
+}
+
+.el-aside {
+  /* Top Masking Shadow, Bottom Masking Shadow, Left-shadow, Right-shadow */
+  box-shadow: 0 -6px white, 0 6px white, 0 6px white, 2px 0 9px -3px black;
+}
+
+.pac-container {
+  border-radius: 4px;
+  z-index: 500000;
+}
+
+.pac-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.pac-item:hover {
+  background-color: #a4d4f6;
+}
+
+.pac-container::after {
+  display: none;
 }

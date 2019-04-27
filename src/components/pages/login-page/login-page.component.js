@@ -19,6 +19,11 @@ export default {
       isFormValidated: false
     }
   },
+  mounted () {
+    if (this.$store.getters.IS_LOGIN) {
+      this.$router.push('dashboard')
+    }
+  },
   methods: {
     updateIsFormValidated () {
       const fields = this.$refs.formData.fields
@@ -28,6 +33,7 @@ export default {
         return acc && (valid || noError)
       }, true)
     },
+
     signIn () {
       if (this.isFormValidated) {
         const credentials = {

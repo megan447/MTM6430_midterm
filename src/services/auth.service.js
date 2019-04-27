@@ -10,7 +10,7 @@ const AuthService = {
         }
       })
   },
-  register (credentials) {
+  register (user) {
     return Axios.post('http://localhost:3000/auth/register', credentials)
       .then(response => {
         if (response.status === 200 || response.status === 201) {
@@ -20,7 +20,7 @@ const AuthService = {
       })
   },
   setHeader (access_token) {
-    Axios.defaults.headers.common['Authorization'] = access_token
+    Axios.defaults.headers.common['Authorization'] = `bearer ${access_token}`
   },
 
   storeToken (token) {
